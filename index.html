@@ -15,14 +15,20 @@
 	<img id="background" src="http://odqttsfgm.bkt.clouddn.com/rain-bg.jpg" alt="rainy day" class="show" />
 	<img id="words" src="http://odqttsfgm.bkt.clouddn.com/words.png" alt="words" />
 	<main id="main">
-		<audio src="http://odqttsfgm.bkt.clouddn.com/thunderfade_1.mp3" autoplay loop>
+		<audio class="soft_rain_audio" src="http://odqttsfgm.bkt.clouddn.com/rainfade_1.mp3" autoplay loop>
+			<p>您的浏览器不支持 audio 元素，推荐使用高级浏览器。</p>
+		</audio>
+		<audio class="rolling_thunder_audio" src="http://odqttsfgm.bkt.clouddn.com/thunderfade_1.mp3" loop>
+			<p>您的浏览器不支持 audio 元素，推荐使用高级浏览器。</p>
+		</audio>
+		<audio class="loud_thunder_audio" src="http://odqttsfgm.bkt.clouddn.com/loudthunderfade_1.mp3" loop>
 			<p>您的浏览器不支持 audio 元素，推荐使用高级浏览器。</p>
 		</audio>
 		<div id="options">
 			<ul id="rain_options">
 				<li class="power soft_rain rain_type clicked">
-					<a id="rainOff" href="#rainOn"></a>
 					<a id="rainOn" href="#rainOff"></a>
+					<a id="rainOff" href="#rainOn"></a>
 				</li>
 				<li class="power rolling_thunder rain_type">
 					<a id="thunderOff" href="#thunderOn"></a>
@@ -38,6 +44,37 @@
 			<div id="progressBar"></div>
 		</div>
 	</main>
+        <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.js"></script>
+	<script>
+		$(function () {
+			$('.soft_rain a').on('click', function () {
+				var audio = $('.soft_rain_audio')[0];
+				if (audio.paused) {
+					audio.play()
+				} else {
+					audio.pause()
+				}
+			})
+			$('.rolling_thunder a').on('click', function () {
+				var audio = $('.rolling_thunder_audio')[0];
+				if (audio.paused) {
+					audio.play()
+				} else {
+					audio.pause()
+				}
+			})
+			$('.loud_thunder a').on('click', function () {
+				var audio = $('.loud_thunder_audio')[0];
+				if (audio.paused) {
+					audio.play()
+				} else {
+					audio.pause()
+				}
+			})
+
+		})
+
+	</script>
 </body>
 
 </html>
