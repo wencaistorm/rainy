@@ -41,6 +41,7 @@ li {
   bottom: 0;
   right: 0;
   z-index: 11;
+  font-size: 0;
 }
 .power {
   display: inline-block;
@@ -52,6 +53,7 @@ li {
   display: inline-block;
   width: 100%;
   height: 100%;
+  background-position: center;
 }
 #rainOn {
   background-image: url(./images/rainon.png);
@@ -75,3 +77,13 @@ li {
   background-image: url(./images/loudthunder_off.png);
 }
 /* options end */
+
+@media screen and (max-width: 720px) {
+    #options {
+        width: 100%;
+    }
+
+    #options li {
+        width: 33.3%;
+    }
+}
