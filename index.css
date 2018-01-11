@@ -1,0 +1,77 @@
+/* base start */
+body {
+  overflow: hidden;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+body.loading {
+  background: #171717;
+}
+* {
+  margin: 0;
+  padding: 0;
+}
+a {
+  color: #000;
+  text-decoration: none;
+}
+li {
+  list-style: none;
+}
+/* base end */
+
+/* layout start */
+#background {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+}
+#words {
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 10;
+}
+/* layout end */
+
+/* options start */
+#options {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  z-index: 11;
+}
+.power {
+  display: inline-block;
+  width: 108px;
+  height: 70px;
+  overflow: hidden;
+}
+.power a {
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+}
+#rainOn {
+  background-image: url(./images/rainon.png);
+  opacity: 0.5;
+}
+#rainOff {
+  background-image: url(./images/rainoff.png);
+}
+#thunderOn {
+  background-image: url(./images/rollingthunder_on.png);
+  opacity: 0.5;
+}
+#thunderOff {
+  background-image: url(./images/rollingthunder_off.png);
+}
+#loudThunderOn {
+  background-image: url(./images/loudthunder_on.png);
+  opacity: 0.5;
+}
+#loudThunderOff {
+  background-image: url(./images/loudthunder_off.png);
+}
+/* options end */
